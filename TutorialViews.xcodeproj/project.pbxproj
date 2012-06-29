@@ -17,6 +17,8 @@
 		885EDA9E159D89F5008B12F3 /* WSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 885EDA9C159D89F5008B12F3 /* WSViewController.xib */; };
 		885EDAA6159D8A4A008B12F3 /* WSTutorialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 885EDAA5159D8A4A008B12F3 /* WSTutorialController.m */; };
 		888F7634159D90C400064116 /* WSTutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 888F7633159D90C400064116 /* WSTutorialView.m */; };
+		888F763F159DBD2800064116 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 888F763E159DBD2800064116 /* Icon-72.png */; };
+		888F7641159DBD2D00064116 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888F7640159DBD2D00064116 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		885EDAA5159D8A4A008B12F3 /* WSTutorialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTutorialController.m; sourceTree = "<group>"; };
 		888F7632159D90C400064116 /* WSTutorialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTutorialView.h; sourceTree = "<group>"; };
 		888F7633159D90C400064116 /* WSTutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTutorialView.m; sourceTree = "<group>"; };
+		888F763E159DBD2800064116 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
+		888F7640159DBD2D00064116 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +94,9 @@
 				885EDA9C159D89F5008B12F3 /* WSViewController.xib */,
 				885EDAA4159D8A4A008B12F3 /* WSTutorialController.h */,
 				885EDAA5159D8A4A008B12F3 /* WSTutorialController.m */,
-				885EDA8E159D89F5008B12F3 /* Supporting Files */,
 				888F7632159D90C400064116 /* WSTutorialView.h */,
 				888F7633159D90C400064116 /* WSTutorialView.m */,
+				885EDA8E159D89F5008B12F3 /* Supporting Files */,
 			);
 			path = TutorialViews;
 			sourceTree = "<group>";
@@ -100,6 +104,8 @@
 		885EDA8E159D89F5008B12F3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				888F7640159DBD2D00064116 /* Icon@2x.png */,
+				888F763E159DBD2800064116 /* Icon-72.png */,
 				885EDA8F159D89F5008B12F3 /* TutorialViews-Info.plist */,
 				885EDA90159D89F5008B12F3 /* InfoPlist.strings */,
 				885EDA93159D89F5008B12F3 /* main.m */,
@@ -162,6 +168,8 @@
 			files = (
 				885EDA92159D89F5008B12F3 /* InfoPlist.strings in Resources */,
 				885EDA9E159D89F5008B12F3 /* WSViewController.xib in Resources */,
+				888F763F159DBD2800064116 /* Icon-72.png in Resources */,
+				888F7641159DBD2D00064116 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

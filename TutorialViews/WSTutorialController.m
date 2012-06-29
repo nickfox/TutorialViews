@@ -10,4 +10,7 @@
 
 @implementation WSTutorialController
 
+@synthesize numberOfTutorialViews = _numberOfTutorialViews;
+@synthesize tutorialViewsArray = _tutorialViewsArray;
+
 @end
