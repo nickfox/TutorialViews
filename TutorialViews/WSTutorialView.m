@@ -20,7 +20,7 @@ blue:((float)((rgbValue) & 0xFF))/255.0 alpha:1.0]
     UILabel *messageLabel;
 }
 
-- (void)messageInit;
+- (void)WS_commonTutorialViewInit;
 
 @end
 
@@ -30,7 +30,7 @@ blue:((float)((rgbValue) & 0xFF))/255.0 alpha:1.0]
 {
     if((self = [super initWithFrame:frame]))
     {
-        [self messageInit];
+        [self WS_commonTutorialViewInit];
     }
     return self;
 }
@@ -39,7 +39,7 @@ blue:((float)((rgbValue) & 0xFF))/255.0 alpha:1.0]
 {
 	if((self = [super initWithCoder:decoder]))
 	{
-		[self messageInit];
+		[self WS_commonTutorialViewInit];
 	}
 	return self;
 }
@@ -54,11 +54,11 @@ blue:((float)((rgbValue) & 0xFF))/255.0 alpha:1.0]
     [messageLabel setText:theMessage];  
 }
 
-- (void)messageInit
+- (void)WS_commonTutorialViewInit
 {
     self.opaque = NO;
     self.alpha = 0.0;
-    self.layer.backgroundColor = [UIColor whiteColor].CGColor;
+    self.layer.backgroundColor = [UIColor clearColor].CGColor;
     
     CALayer *messageLayer = [CALayer layer];
     messageLayer.frame = CGRectMake(20.0, 20.0, self.layer.frame.size.width-40.0, self.layer.frame.size.height-40.0);    
@@ -71,9 +71,26 @@ blue:((float)((rgbValue) & 0xFF))/255.0 alpha:1.0]
     messageLayer.shadowOpacity = 0.4;
     messageLayer.shadowRadius =  3.0;
 
-    [messageLayer setZPosition:-1.0];
     [self.layer addSublayer:messageLayer];
-
+    
+    CAShapeLayer *arrowLayer = [CAShapeLayer layer];
+    arrowLayer.frame = CGRectMake(35.0, 0.0, 40.0, 40.0); // x,y,w,h   
+    //arrowLayer.backgroundColor = [UIColor yellowColor].CGColor;
+    [arrowLayer setLineJoin:kCALineJoinRound];
+    [arrowLayer setStrokeColor:[[UIColor blackColor] CGColor]];
+    [arrowLayer setLineWidth:1.0f];
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPoint topLeft[] =
+	{
+		CGPointMake(0.0, 20.0), // x,y
+		CGPointMake(10.0, 10.0),
+		CGPointMake(20.0, 20.0)
+	};
+    CGPathAddLines(path, NULL, topLeft, 3);
+    CGPathCloseSubpath(path);
+    [arrowLayer setPath:path];
+    [self.layer addSublayer:arrowLayer];   
+    
     titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     [titleLabel setBackgroundColor:[UIColor clearColor]];
     [titleLabel setTextAlignment:UITextAlignmentCenter];
@@ -94,6 +111,7 @@ blue:((float)((rgbValue) & 0xFF))/255.0 alpha:1.0]
 
 -(void)drawRect:(CGRect)rect
 {
+    /*
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 1.0);
@@ -122,6 +140,7 @@ blue:((float)((rgbValue) & 0xFF))/255.0 alpha:1.0]
     CGContextMoveToPoint(context, 50.0, 10.0);
     CGContextAddLineToPoint(context, 50.0, 30.0);
     CGContextStrokePath(context);
+     */
 }
 
 - (void)layoutSubviews
