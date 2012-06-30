@@ -77,18 +77,19 @@ blue:((float)((rgbValue) & 0xFF))/255.0 alpha:1.0]
     arrowLayer.frame = CGRectMake(35.0, 0.0, 40.0, 40.0); // x,y,w,h   
     //arrowLayer.backgroundColor = [UIColor yellowColor].CGColor;
     [arrowLayer setLineJoin:kCALineJoinRound];
-    [arrowLayer setStrokeColor:[[UIColor blackColor] CGColor]];
-    [arrowLayer setLineWidth:1.0f];
+    [arrowLayer setStrokeColor:[UIColor blackColor].CGColor];
+    [arrowLayer setLineWidth:1.0];
     CGMutablePathRef path = CGPathCreateMutable();
     CGPoint topLeft[] =
 	{
-		CGPointMake(0.0, 20.0), // x,y
+		CGPointMake(0.0, 20.0),
 		CGPointMake(10.0, 10.0),
 		CGPointMake(20.0, 20.0)
 	};
     CGPathAddLines(path, NULL, topLeft, 3);
     CGPathCloseSubpath(path);
-    [arrowLayer setPath:path];
+    [arrowLayer setPath:path]; 
+    
     [self.layer addSublayer:arrowLayer];   
     
     titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -107,40 +108,6 @@ blue:((float)((rgbValue) & 0xFF))/255.0 alpha:1.0]
         
     [self addSubview:titleLabel];
     [self addSubview:messageLabel];
-}
-
--(void)drawRect:(CGRect)rect
-{
-    /*
-    CGContextRef context = UIGraphicsGetCurrentContext();
-
-    CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 1.0);
-    CGContextSetRGBFillColor(context, 0.39, 0.99, 0.85, 1.0);
-    CGContextSetLineJoin(context, kCGLineJoinRound);
-
-    CGPoint topLeft[] =
-	{
-		CGPointMake(30.0, 20.0), // x,y
-		CGPointMake(40.0, 10.0),
-		CGPointMake(50.0, 20.0)
-	};
-    
-	CGContextAddLines(context, topLeft, sizeof(topLeft)/sizeof(topLeft[0]));
-    CGContextClosePath(context);
-    CGContextDrawPath(context, kCGPathFillStroke);
-
-    CGContextSetRGBStrokeColor(context, 0.39, 0.99, 0.85, 1.0);
-    CGContextSetLineWidth(context, 3.0);
-    CGContextMoveToPoint(context, 32.0, 20.0);
-    CGContextAddLineToPoint(context, 48.0, 20.0);
-    CGContextStrokePath(context);
-    
-    CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 1.0);
-    CGContextSetLineWidth(context, 1.0);
-    CGContextMoveToPoint(context, 50.0, 10.0);
-    CGContextAddLineToPoint(context, 50.0, 30.0);
-    CGContextStrokePath(context);
-     */
 }
 
 - (void)layoutSubviews
@@ -170,7 +137,7 @@ blue:((float)((rgbValue) & 0xFF))/255.0 alpha:1.0]
     [UIView animateWithDuration:0.75
                      animations:^{ 
                          self.alpha = 0.9;
-                     }];
+    }];
 }
 
 @end
