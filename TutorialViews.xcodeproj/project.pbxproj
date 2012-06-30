@@ -20,6 +20,8 @@
 		888F763F159DBD2800064116 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 888F763E159DBD2800064116 /* Icon-72.png */; };
 		888F7641159DBD2D00064116 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888F7640159DBD2D00064116 /* Icon@2x.png */; };
 		888F7660159DFBE100064116 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888F765F159DFBE100064116 /* QuartzCore.framework */; };
+		888F7693159F501F00064116 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 888F7691159F501F00064116 /* close.png */; };
+		888F7696159F507F00064116 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888F7695159F507F00064116 /* close@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		888F763E159DBD2800064116 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
 		888F7640159DBD2D00064116 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		888F765F159DFBE100064116 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		888F7691159F501F00064116 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		888F7695159F507F00064116 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 			children = (
 				888F7640159DBD2D00064116 /* Icon@2x.png */,
 				888F763E159DBD2800064116 /* Icon-72.png */,
+				888F7691159F501F00064116 /* close.png */,
+				888F7695159F507F00064116 /* close@2x.png */,
 				885EDA8F159D89F5008B12F3 /* TutorialViews-Info.plist */,
 				885EDA90159D89F5008B12F3 /* InfoPlist.strings */,
 				885EDA93159D89F5008B12F3 /* main.m */,
@@ -174,6 +180,8 @@
 				885EDA9E159D89F5008B12F3 /* WSViewController.xib in Resources */,
 				888F763F159DBD2800064116 /* Icon-72.png in Resources */,
 				888F7641159DBD2D00064116 /* Icon@2x.png in Resources */,
+				888F7693159F501F00064116 /* close.png in Resources */,
+				888F7696159F507F00064116 /* close@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

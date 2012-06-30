@@ -18,10 +18,11 @@ blue:((float)((rgbValue) & 0xFF))/255.0 alpha:1.0]
 {
     UILabel *titleLabel;
     UILabel *messageLabel;
+    UIButton *closeButton;
 }
 
 - (void)WS_commonTutorialViewInit;
-
+- (void)closeTutorialView:(id)sender;
 @end
 
 @implementation WSTutorialView
@@ -105,38 +106,64 @@ blue:((float)((rgbValue) & 0xFF))/255.0 alpha:1.0]
     [messageLabel setFont:[UIFont boldSystemFontOfSize:13]];
     [messageLabel setLineBreakMode:UILineBreakModeWordWrap];
     [messageLabel setNumberOfLines:0];
-        
+    
+    UIImage *closeImage = [UIImage imageNamed: @"close"];
+    closeButton = [[UIButton alloc] initWithFrame:CGRectZero];
+    [closeButton setBackgroundImage: closeImage forState: UIControlStateNormal];
+    [closeButton addTarget:self action:@selector(closeTutorialView:) forControlEvents:UIControlEventTouchUpInside];
+
     [self addSubview:titleLabel];
     [self addSubview:messageLabel];
+    [self addSubview:closeButton];    
 }
 
 - (void)layoutSubviews
 {
     [super layoutSubviews];
     
-    CGRect bounds = [self bounds];
-    CGRect titleFrame    = CGRectZero;
-    CGRect messageFrame  = CGRectZero;
+    CGRect bounds       = [self bounds];
+    CGRect titleFrame   = CGRectZero;
+    CGRect messageFrame = CGRectZero;
+    CGRect buttonFrame  = CGRectZero;
+    
+    UIImage *closeImage = [UIImage imageNamed: @"close"];
     
     titleFrame.size.width   = CGRectGetWidth(bounds);
     messageFrame.size.width = CGRectGetWidth(bounds) - 6.0;
+    buttonFrame.size.width  = closeImage.size.width;
     
     titleFrame.size.height   = 20.0;
     messageFrame.size.height = CGRectGetHeight(bounds) - titleFrame.size.height;
+    buttonFrame.size.height   = closeImage.size.height;
     
-    titleFrame.origin.y = 20.0;
+    titleFrame.origin.y = 24.0;
+    titleFrame.origin.x = -7.0;
     messageFrame.origin.y = CGRectGetMaxY(titleFrame);
     messageFrame.origin.x = 3.0;
+    buttonFrame.origin.x = CGRectGetWidth(bounds)-43.0;
+    buttonFrame.origin.y = 25.0;
     
     [titleLabel   setFrame:titleFrame];
     [messageLabel setFrame:messageFrame];
+    [closeButton setFrame:buttonFrame];
+}
+
+- (void)closeTutorialView:(id) sender
+{
+    [UIView animateWithDuration:0.75
+                     animations:^{ 
+                         self.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished){
+                         [self removeFromSuperview];
+                     }];
 }
 
 - (void)showMessageWithDelay:(int)theDelay 
 {
     [UIView animateWithDuration:0.75
                      animations:^{ 
-                         self.alpha = 0.9;
+                         self.alpha = 1.0;
     }];
 }
 
