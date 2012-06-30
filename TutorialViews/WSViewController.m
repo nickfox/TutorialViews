@@ -7,23 +7,38 @@
 //
 
 #import "WSViewController.h"
-
-@interface WSViewController ()
-
-@end
+#import "WSTutorialView.h"
 
 @implementation WSViewController
+
+@synthesize toolbar;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [infoButton addTarget:self action:@selector(startTutorial:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *infoBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
+    self.toolbar.items = [NSArray arrayWithObjects:infoBarButtonItem, nil];  
+}
+
+- (void)startTutorial:(id)sender
+{
+
+     WSTutorialView *msgView = [[WSTutorialView alloc] initWithFrame:CGRectMake(100.0, 100.0, 200.0, 200.0)];
+     [msgView setTitle:@"Momo Alert"];
+     [msgView setMessage:@"You a good momo."];
+     
+     [self.view addSubview:msgView];
+     [msgView showMessageWithDelay:3];
+
 }
 
 - (void)viewDidUnload
 {
+    [self setToolbar:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

@@ -10,4 +10,6 @@
 
 @interface WSViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+
 @end

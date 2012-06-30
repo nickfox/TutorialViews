@@ -11,6 +11,6 @@
 @interface WSTutorialController : NSObject
 
 @property(nonatomic        ) NSUInteger   numberOfTutorialViews;
-@property(strong, nonatomic) NSArray     *tutorialViewsArray;
+@property(nonatomic, strong) NSArray     *tutorialViewsArray;
 
 @end

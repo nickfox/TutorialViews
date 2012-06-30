@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WSTutorialView : NSObject
+@interface WSTutorialView : UIView
+
+- (void)setTitle:(NSString *)title;
+- (void)setMessage:(NSString *)message;
+- (void)showMessageWithDelay:(int)delay;
 
 @end

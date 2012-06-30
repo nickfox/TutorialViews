@@ -19,6 +19,7 @@
 		888F7634159D90C400064116 /* WSTutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 888F7633159D90C400064116 /* WSTutorialView.m */; };
 		888F763F159DBD2800064116 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 888F763E159DBD2800064116 /* Icon-72.png */; };
 		888F7641159DBD2D00064116 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888F7640159DBD2D00064116 /* Icon@2x.png */; };
+		888F7660159DFBE100064116 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888F765F159DFBE100064116 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		888F7633159D90C400064116 /* WSTutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTutorialView.m; sourceTree = "<group>"; };
 		888F763E159DBD2800064116 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
 		888F7640159DBD2D00064116 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		888F765F159DFBE100064116 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				888F7660159DFBE100064116 /* QuartzCore.framework in Frameworks */,
 				885EDA88159D89F5008B12F3 /* UIKit.framework in Frameworks */,
 				885EDA8A159D89F5008B12F3 /* Foundation.framework in Frameworks */,
 				885EDA8C159D89F5008B12F3 /* CoreGraphics.framework in Frameworks */,
@@ -80,6 +83,7 @@
 				885EDA87159D89F5008B12F3 /* UIKit.framework */,
 				885EDA89159D89F5008B12F3 /* Foundation.framework */,
 				885EDA8B159D89F5008B12F3 /* CoreGraphics.framework */,
+				888F765F159DFBE100064116 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
